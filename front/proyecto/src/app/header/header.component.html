@@ -1,0 +1,28 @@
+<header class="header">
+    <div class="logo">
+      <a routerLink="">
+        <img src="./assets/logo.jpg" alt="logo">
+      </a>      
+    </div>
+    <div class="menu">
+      <!-- Menú de secciones -->
+      <ul>
+        <li><a routerLink="/seccion1">Sección 1</a></li>
+        <li><a routerLink="/seccion2">Sección 2</a></li>
+        
+      </ul>
+    </div>
+    <div class="search">
+      <!-- Barra de búsqueda -->
+      <input type="text" placeholder="Buscar...">
+    </div>
+    <div class="user-options">
+      <!-- Opciones de inicio de sesión/registro y avatar del usuario -->
+      <a routerLink="/login" *ngIf="!logueado">Iniciar Sesión</a>
+      <a routerLink="/registro" *ngIf="!logueado">Registrarse</a>
+      <img *ngIf="!logueado" src="ruta-imagen-usuario" alt="Avatar">
+    </div>
+  </header>
+
+ 
+  

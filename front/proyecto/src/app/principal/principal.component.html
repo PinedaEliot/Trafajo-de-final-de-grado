@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="main-content">
+    <div class="music-player">
+      <audio #audioPlayer controls>
+        <source [src]="currentTrack" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+      </audio>
+      <div class="controls">
+        <button (click)="playPause()">{{ isPlaying ? 'Pausar' : 'Reproducir' }}</button>
+        <button (click)="previousTrack()">Anterior</button>
+        <button (click)="nextTrack()">Siguiente</button>
+      </div>
+    </div>
+    <div class="carousel">
+      <img [src]="images[currentImageIndex]" alt="Imagen del carrusel">
+      <button (click)="prevSlide()">Anterior</button>
+      <button (click)="nextSlide()">Siguiente</button>
+    </div>
+    <div class="news-carousel">
+      <h2>Últimas Novedades</h2>
+      <div class="news-content">
+        {{ newsList[currentNewIndex] }}
+      </div>
+      <div class="news-controls">
+        <button (click)="showPreviousNews()">Anterior</button>
+        <button (click)="showNextNews()">Siguiente</button>
+      </div>
+    </div>
+  </div>
+</div>
