@@ -10,10 +10,14 @@ import { RegistroUsuarioComponent } from './registro/registro-usuario/registro-u
 import { RegistroEmpresaComponent } from './registro/registro-empresa/registro-empresa.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
+import { InicioSesionUsuarioComponent } from './inicio-sesion/inicio-sesion-usuario/inicio-sesion-usuario.component';
+import { InicioSesionEmpresaComponent } from './inicio-sesion/inicio-sesion-empresa/inicio-sesion-empresa.component';
+import { FaqComponent } from './faq/faq.component';
+import { EmpresasColaboradorasComponent } from './empresas-colaboradoras/empresas-colaboradoras.component';
 
 const appRoutes:Routes=[
-
-  {path:'inicio', component:PrincipalComponent},
+  {path:'', component:PrincipalComponent},
   {path:'registro', component:RegistroComponent, 
   children:[
 
@@ -21,8 +25,16 @@ const appRoutes:Routes=[
     {path: 'empresa', component: RegistroEmpresaComponent}
 
   ],},
-  {path:'contacto', component: ContactoComponent}
+  {path:'contacto', component: ContactoComponent},
+  {path:'empresas', component: EmpresasColaboradorasComponent},
+  {path:'faq', component: FaqComponent},
+  {path:'login', component:InicioSesionComponent, 
+  children:[
 
+    {path: 'usuario', component: InicioSesionUsuarioComponent},
+    {path: 'empresa', component: InicioSesionEmpresaComponent}
+
+  ],},
 ];
 
 @NgModule({
@@ -32,8 +44,13 @@ const appRoutes:Routes=[
     HeaderComponent,
     RegistroComponent,
     FooterComponent,
-    ContactoComponent
-    ],
+    ContactoComponent,
+    InicioSesionComponent,
+    InicioSesionUsuarioComponent,
+    InicioSesionEmpresaComponent,
+    FaqComponent,
+    EmpresasColaboradorasComponent
+      ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),

@@ -1,0 +1,29 @@
+.empresas-colaboradoras {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .tarjeta {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .descripcion {
+    padding: 10px;
+    background-color: #f0f0f0;
+    display: none;
+  }

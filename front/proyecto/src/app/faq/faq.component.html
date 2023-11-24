@@ -1,0 +1,9 @@
+<div class="faq">
+  <h2>Preguntas Frecuentes</h2>
+  <div *ngFor="let faq of faqList">
+    <div class="question" (click)="toggleFaq(faq)">
+      <span>{{ faq.question }}</span>
+    </div>
+    <div class="answer" *ngIf="faq.expanded">{{ faq.answer }}</div>
+  </div>
+</div>

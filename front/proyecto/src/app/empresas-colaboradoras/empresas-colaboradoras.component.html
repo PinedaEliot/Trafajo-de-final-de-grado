@@ -1,0 +1,8 @@
+<div class="empresas-colaboradoras">
+    <h2>Empresas Colaboradoras</h2>
+    <div class="tarjeta" *ngFor="let empresa of empresas" (click)="toggleDescripcion(empresa)">
+      <img [src]="empresa.logo" alt="{{ empresa.nombre }}">
+      <div class="descripcion" *ngIf="empresa.mostrarDescripcion">{{ empresa.descripcion }}</div>
+    </div>
+  </div>
+  
